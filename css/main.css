@@ -59,7 +59,7 @@ main {
 
 section {
     background-color: var(--dark-blue-card-bg);
-    max-width: 360px;
+    max-width: 340px;
     padding: 2rem 2rem 0 2rem;
     border-radius: 1rem;
 }
@@ -67,9 +67,7 @@ section {
 .card-image-container {
     border-radius: 1rem;
     position: relative;
-    z-index: 0;
-    width: 320px;
-    height: 320px;
+    min-width: 80%;
 }
 
 .card-image {
@@ -82,7 +80,7 @@ section {
     top:0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 99%;
     border-radius: inherit;
     display: flex;
     justify-content: center;
@@ -166,13 +164,18 @@ hr {
 }
 
 footer {
-    height: 50px;
+    min-height: 50px;
     background-color: var(--cyan);
     color: var(--dark-blue-card-bg);
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     transition: var(--basic-transition);
+}
+
+footer p {
+    line-height: initial;
 }
 
 footer a {
@@ -183,4 +186,10 @@ footer a {
 footer a:hover {
     background-color: var(--soft-blue);
     opacity: 0.7;
+}
+
+@media screen and (max-width: 426px) {
+    footer {
+        padding: 2rem;
+    }
 }
